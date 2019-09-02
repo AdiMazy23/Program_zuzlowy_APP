@@ -37,33 +37,43 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = MainActivity.class.getName();
 
     TextView temporaryTxt;
+    TextView temporaryTxt2;
     public String string_test;
 
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference myRef = database.getReference("dupahehe");
+    DatabaseReference myRef2 = FirebaseDatabase.getInstance().getReference().child("Orzeł Łódź");
+
+    public List<Teams> teams = new ArrayList<>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         temporaryTxt = (TextView) findViewById(R.id.textView5);
+        temporaryTxt2 = (TextView) findViewById(R.id.textView6);
 
         //test
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                // This method is called once with the initial value and again
-                // whenever data at this location is updated.
+                teams.clear();
+
                 String value = dataSnapshot.getValue(String.class);
                 //Log.d("dupa udalo sie", "Value is: " + value);
                 string_test = value;
                 Log.d("dupa udalo sie", "Value is: " + string_test);
                 temporaryTxt.setText(string_test);
+
 
             }
 
