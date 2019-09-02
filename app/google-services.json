@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "340834166299",
+    "firebase_url": "https://comarch-speedway.firebaseio.com",
+    "project_id": "comarch-speedway",
+    "storage_bucket": "comarch-speedway.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:340834166299:android:3f258f9870776f0a",
+        "android_client_info": {
+          "package_name": "com.example.comarch_speedway"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "340834166299-9hso2vh10vu9lo9r88fs6hgfouodtkn3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.comarch_speedway",
+            "certificate_hash": "1aa00a905cd9f89ee7bbbb97f5559db0fb542296"
+          }
+        },
+        {
+          "client_id": "340834166299-m9mbba0eftp0fm3d3ehoq2gm4kq0t6ai.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUJNfYNNfDVGSvTbcFaoV1nt4mN7NCPVo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "340834166299-m9mbba0eftp0fm3d3ehoq2gm4kq0t6ai.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
