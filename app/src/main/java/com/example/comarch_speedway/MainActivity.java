@@ -27,6 +27,8 @@ package com.example.comarch_speedway;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -45,14 +47,15 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = MainActivity.class.getName();
 
     TextView temporaryTxt;
-    TextView temporaryTxt2;
+    ListView listViewTeams;
     public String string_test;
 
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference myRef = database.getReference("dupahehe");
-    DatabaseReference myRef2 = FirebaseDatabase.getInstance().getReference().child("Orzeł Łódź");
+    DatabaseReference myRef2 = database.getReference("teams");
 
     public List<Teams> teams = new ArrayList<>();
+    public ArrayAdapter<Teams> teamsArrayAdapter;
 
 
     @Override
@@ -60,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         temporaryTxt = (TextView) findViewById(R.id.textView5);
-        temporaryTxt2 = (TextView) findViewById(R.id.textView6);
+        listViewTeams = (ListView) findViewById(R.id.ListView);
 
         //test
         myRef.addValueEventListener(new ValueEventListener() {
@@ -71,8 +74,13 @@ public class MainActivity extends AppCompatActivity {
                 String value = dataSnapshot.getValue(String.class);
                 //Log.d("dupa udalo sie", "Value is: " + value);
                 string_test = value;
-                Log.d("dupa udalo sie", "Value is: " + string_test);
+                Log.d("Yeah udalo sie", "Value is: " + string_test);
                 temporaryTxt.setText(string_test);
+                for (DataSnapshot ds:dataSnapshot.getChildren())
+                {
+
+
+                }
 
 
             }

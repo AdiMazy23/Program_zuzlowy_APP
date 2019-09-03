@@ -1,30 +1,24 @@
 package com.example.comarch_speedway;
 
+import java.util.List;
+
 public class Teams {
-    private String teamName;
-    private String riderName;
+    private List<String> teamName;
 
     public Teams() {
     }
 
-    public Teams(String teamName, String riderName) {
+    public Teams(List<String> teamName) {
         this.teamName = teamName;
-        this.riderName = riderName;
     }
 
-    public String getTeamName() {
+    public List<String> getTeamName() {
         return teamName;
     }
 
-    public void setTeamName(String teamName) {
+    public void setTeamName(List<String> teamName) {
         this.teamName = teamName;
     }
 
-    public String getRiderName() {
-        return riderName;
-    }
 
-    public void setRiderName(String riderName) {
-        this.riderName = riderName;
-    }
 }
