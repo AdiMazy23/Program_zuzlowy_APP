@@ -27,10 +27,14 @@ package com.example.comarch_speedway;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Spinner;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.database.DataSnapshot;
@@ -41,6 +45,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -52,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
 
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference myRef = database.getReference("dupahehe");
-    DatabaseReference myRef2 = database.getReference("teams");
+    DatabaseReference myRef2 = database.getInstance().getReference().child("teams");
 
     public List<Teams> teams = new ArrayList<>();
     public ArrayAdapter<Teams> teamsArrayAdapter;
@@ -63,26 +68,34 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         temporaryTxt = (TextView) findViewById(R.id.textView5);
-        listViewTeams = (ListView) findViewById(R.id.ListView);
 
         //test
-        myRef.addValueEventListener(new ValueEventListener() {
+        myRef2.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                teams.clear();
+                Teams teams = dataSnapshot.getValue(Teams.class);
+                Map<String, Object> map = (Map<String, Object>) dataSnapshot.getValue();
+                List<String> teams_name = new ArrayList(map.keySet());
+                Log.d("Sprawdzam keys, ", "Value is: " + teams_name); //działa elegancko (nazwy klubów)
+                List<String> teams_name_seniorzy = new ArrayList();
+                for (int i=0; i<teams_name.size(); i++) {
+                    if (teams_name.get(i).contains("juniorzy") != true) {
+                        System.out.println(teams_name.get(i));
+                        teams_name_seniorzy.add(teams_name.get(i));
+                    }
+                } //wyświetla tylko nazwy klubów bez "juniorzy w nazwie
 
-                String value = dataSnapshot.getValue(String.class);
-                //Log.d("dupa udalo sie", "Value is: " + value);
-                string_test = value;
-                Log.d("Yeah udalo sie", "Value is: " + string_test);
-                temporaryTxt.setText(string_test);
-                for (DataSnapshot ds:dataSnapshot.getChildren())
-                {
+                Spinner hostSpinner = (Spinner) findViewById(R.id.gospodarz_spinner); //zapelnianie spinnerow w main widoku
+                Spinner guestSpinner = (Spinner) findViewById(R.id.gosc_spinner);
 
 
-                }
+                Log.d("Sprawdzam, ", "Value is: " + map);
+                Log.d("Parents, ", "Values are: " + teams);
 
-
+                ArrayAdapter<String> areasAdapter = new ArrayAdapter<String>(MainActivity.this, android.R.layout.simple_spinner_item, teams_name_seniorzy);
+                areasAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                hostSpinner.setAdapter(areasAdapter);
+                guestSpinner.setAdapter(areasAdapter);
             }
 
             @Override
@@ -90,6 +103,41 @@ public class MainActivity extends AppCompatActivity {
                 // Failed to read value
                 Log.w("dupa nie udalo sie", "Failed to read value.", error.toException());
             }
+        }        );
+        myRef2.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
         });
+        setButtonClickListener();
     }
+
+    public void myClickHandler (View view){
+        switch (view.getId()){
+            case R.id.main_button_next:
+                Log.d("Sprawdzam button,  ", "KLIKNIĘTO NEXT"); //w tym miejscu dopisać save i otworzyc nowy widok z wyborem zawodnikow
+                break;
+            default:
+        }
+    }
+
+    public void setButtonClickListener(){
+        Button mainNext = (Button) findViewById(R.id.main_button_next);
+
+        View.OnClickListener myClickListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View view){
+                //Log.d("Sprawdzam button,  ", "KLIKNIĘTO NEXT");
+                myClickHandler(view);
+            }
+        };
+            mainNext.setOnClickListener(myClickListener);
+    }
+
 }

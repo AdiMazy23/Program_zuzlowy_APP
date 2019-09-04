@@ -11,15 +11,54 @@
         android:id="@+id/textView5"
         android:layout_width="411dp"
         android:layout_height="37dp"
-        android:text="aaaaaaaa"
+        android:text="PROGRAM ŻUŻLOWY"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ListView
-        android:id="@+id/ListView"
-        android:layout_width="408dp"
-        android:layout_height="701dp"
+    <TextView
+        android:id="@+id/gospodarz_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Wybierz gospodarza:"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/gosc_txt"
+        android:layout_width="170dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="120dp"
+        android:text="Wybierz gościa:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gospodarz_txt" />
+
+    <Spinner
+        android:id="@+id/gospodarz_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gospodarz_txt" />
+
+    <Spinner
+        android:id="@+id/gosc_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="44dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gosc_txt" />
+
+    <Button
+        android:id="@+id/main_button_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="161dp"
+        android:layout_marginTop="40dp"
+        android:text="Next"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gosc_spinner" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
