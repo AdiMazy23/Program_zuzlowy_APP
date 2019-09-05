@@ -25,9 +25,11 @@ public class MainActivity extends AppCompatActivity {
 
 package com.example.comarch_speedway;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -49,7 +51,7 @@ import java.util.Map;
 
 
 public class MainActivity extends AppCompatActivity {
-    private static final String TAG = MainActivity.class.getName();
+    //private static final String TAG = MainActivity.class.getName();
 
     TextView temporaryTxt;
     ListView listViewTeams;
@@ -69,6 +71,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         temporaryTxt = (TextView) findViewById(R.id.textView5);
 
+        final Spinner hostSpinner = (Spinner) findViewById(R.id.gospodarz_spinner); //zapelnianie spinnerow w main widoku
+        final Spinner guestSpinner = (Spinner) findViewById(R.id.gosc_spinner);
+
+        final String host_selected;
+        final String guest_selected;
+
         //test
         myRef2.addValueEventListener(new ValueEventListener() {
             @Override
@@ -85,9 +93,6 @@ public class MainActivity extends AppCompatActivity {
                     }
                 } //wyświetla tylko nazwy klubów bez "juniorzy w nazwie
 
-                Spinner hostSpinner = (Spinner) findViewById(R.id.gospodarz_spinner); //zapelnianie spinnerow w main widoku
-                Spinner guestSpinner = (Spinner) findViewById(R.id.gosc_spinner);
-
 
                 Log.d("Sprawdzam, ", "Value is: " + map);
                 Log.d("Parents, ", "Values are: " + teams);
@@ -96,6 +101,19 @@ public class MainActivity extends AppCompatActivity {
                 areasAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 hostSpinner.setAdapter(areasAdapter);
                 guestSpinner.setAdapter(areasAdapter);
+
+                hostSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
+                        String index = arg0.getSelectedItem().toString();
+                        //Toast.makeText(getBaseContext(), "You have selected item : " + presidents[index], Toast.LENGTH_SHORT).show();
+                        Log.d("Spinner ", "Wybrales sobie na spinnerze:  " + index);
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> arg0) {
+                    }
+                });
             }
 
             @Override
@@ -118,10 +136,13 @@ public class MainActivity extends AppCompatActivity {
         setButtonClickListener();
     }
 
+
     public void myClickHandler (View view){
         switch (view.getId()){
             case R.id.main_button_next:
                 Log.d("Sprawdzam button,  ", "KLIKNIĘTO NEXT"); //w tym miejscu dopisać save i otworzyc nowy widok z wyborem zawodnikow
+                //startActivity(new Intent(MainActivity.this, RidersListActivity.class));
+                openRidersActivity();
                 break;
             default:
         }
@@ -133,11 +154,18 @@ public class MainActivity extends AppCompatActivity {
         View.OnClickListener myClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View view){
-                //Log.d("Sprawdzam button,  ", "KLIKNIĘTO NEXT");
                 myClickHandler(view);
             }
         };
             mainNext.setOnClickListener(myClickListener);
+    }
+
+
+
+    public void openRidersActivity(){
+        Intent intent = new Intent(MainActivity.this, RidersListActivity.class);
+        //intent.putExtra()
+        startActivity(intent);
     }
 
 }
