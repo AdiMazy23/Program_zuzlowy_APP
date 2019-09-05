@@ -106,7 +106,9 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
                         String index = arg0.getSelectedItem().toString();
+
                         //Toast.makeText(getBaseContext(), "You have selected item : " + presidents[index], Toast.LENGTH_SHORT).show();
+                        setStringIntent(index);
                         Log.d("Spinner ", "Wybrales sobie na spinnerze:  " + index);
                     }
 
@@ -136,6 +138,11 @@ public class MainActivity extends AppCompatActivity {
         setButtonClickListener();
     }
 
+    public void setStringIntent(String string){
+        final String host_team;
+
+        host_team = string;
+    }
 
     public void myClickHandler (View view){
         switch (view.getId()){
@@ -164,7 +171,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void openRidersActivity(){
         Intent intent = new Intent(MainActivity.this, RidersListActivity.class);
-        //intent.putExtra()
+        //intent.putExtra(host_team);
         startActivity(intent);
     }
 
