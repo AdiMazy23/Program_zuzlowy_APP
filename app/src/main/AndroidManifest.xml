@@ -26,6 +26,11 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".RidersListActivity_GUESTS">
+            <intent-filter>
+                <action android:name="com.package.name.RidersListActivity"/>
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

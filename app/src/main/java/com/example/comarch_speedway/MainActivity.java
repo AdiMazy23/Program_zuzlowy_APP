@@ -69,7 +69,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        temporaryTxt = (TextView) findViewById(R.id.textView5);
 
         final Spinner hostSpinner = (Spinner) findViewById(R.id.gospodarz_spinner); //zapelnianie spinnerow w main widoku
         final Spinner guestSpinner = (Spinner) findViewById(R.id.gosc_spinner);

@@ -21,7 +21,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-public class RidersListActivity extends AppCompatActivity {
+public class RidersListActivity_GUESTS extends AppCompatActivity {
 
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     //DatabaseReference myRef2 = database.getInstance().getReference().child("teams");
@@ -30,33 +30,33 @@ public class RidersListActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        String hostTeamName;
+        String guestTeamName;
         if (savedInstanceState == null) {
             Bundle extras = getIntent().getExtras();
             //Log.d("Sprawdzam button,  ", extras);
             if (extras == null) {
-                hostTeamName = null;
+                guestTeamName = null;
             } else {
-                hostTeamName = extras.getString("HOST_STRING");
-                Log.d("Przeslany string:  ", hostTeamName);
+                guestTeamName = extras.getString("GUEST_STRING");
+                Log.d("Przeslany string:  ", guestTeamName);
             }
         } else {
-            hostTeamName = (String) savedInstanceState.getSerializable("NULL...");
+            guestTeamName = (String) savedInstanceState.getSerializable("NULL...");
         }
-        DatabaseReference myRef2 = database.getInstance().getReference().child("teams").child(hostTeamName);
+        DatabaseReference myRef2 = database.getInstance().getReference().child("teams").child(guestTeamName);
         //DatabaseReference myRefjuniorzy = database.getInstance().getReference().child("teams").child(hostTeamName);
-        setContentView(R.layout.activity_wybor_zawodnikow_gospodarzy);
+        setContentView(R.layout.activity_wybor_zawodnikow_gosci);
 
         final List<String> riders_name_seniorzyijuniorzy = new ArrayList();
         final List<String> riders_name_juniorzy = new ArrayList();
 
-        final Spinner SpinnerRiderNr9 = (Spinner) findViewById(R.id.spinnerNr1);
-        final Spinner SpinnerRiderNr10 = (Spinner) findViewById(R.id.spinnerNr2);
-        final Spinner SpinnerRiderNr11 = (Spinner) findViewById(R.id.spinnerNr3);
-        final Spinner SpinnerRiderNr12 = (Spinner) findViewById(R.id.spinnerNr4);
-        final Spinner SpinnerRiderNr13 = (Spinner) findViewById(R.id.spinnerNr5);
-        final Spinner SpinnerRiderNr14 = (Spinner) findViewById(R.id.spinnerNr6);
-        final Spinner SpinnerRiderNr15 = (Spinner) findViewById(R.id.spinnerNr7);
+        final Spinner SpinnerRiderNr1 = (Spinner) findViewById(R.id.spinnerNr1);
+        final Spinner SpinnerRiderNr2 = (Spinner) findViewById(R.id.spinnerNr2);
+        final Spinner SpinnerRiderNr3 = (Spinner) findViewById(R.id.spinnerNr3);
+        final Spinner SpinnerRiderNr4 = (Spinner) findViewById(R.id.spinnerNr4);
+        final Spinner SpinnerRiderNr5 = (Spinner) findViewById(R.id.spinnerNr5);
+        final Spinner SpinnerRiderNr6 = (Spinner) findViewById(R.id.spinnerNr6);
+        final Spinner SpinnerRiderNr7 = (Spinner) findViewById(R.id.spinnerNr7);
 
         myRef2.addValueEventListener(new ValueEventListener() {
             @Override
@@ -86,28 +86,28 @@ public class RidersListActivity extends AppCompatActivity {
                     }
                 }
 
-                ArrayAdapter<String> areasAdapter = new ArrayAdapter<String>(RidersListActivity.this, android.R.layout.simple_spinner_item, riders_name_seniorzyijuniorzy);
+                ArrayAdapter<String> areasAdapter = new ArrayAdapter<String>(RidersListActivity_GUESTS.this, android.R.layout.simple_spinner_item, riders_name_seniorzyijuniorzy);
                 areasAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                SpinnerRiderNr9.setAdapter(areasAdapter);
-                SpinnerRiderNr9.setSelection(riders_name_seniorzyijuniorzy.indexOf("Brak zawodnika"));
-                SpinnerRiderNr10.setAdapter(areasAdapter);
-                SpinnerRiderNr10.setSelection(riders_name_seniorzyijuniorzy.indexOf("Brak zawodnika"));
-                SpinnerRiderNr11.setAdapter(areasAdapter);
-                SpinnerRiderNr11.setSelection(riders_name_seniorzyijuniorzy.indexOf("Brak zawodnika"));
-                SpinnerRiderNr12.setAdapter(areasAdapter);
-                SpinnerRiderNr12.setSelection(riders_name_seniorzyijuniorzy.indexOf("Brak zawodnika"));
-                SpinnerRiderNr13.setAdapter(areasAdapter);
-                SpinnerRiderNr13.setSelection(riders_name_seniorzyijuniorzy.indexOf("Brak zawodnika"));
+                SpinnerRiderNr1.setAdapter(areasAdapter);
+                SpinnerRiderNr1.setSelection(riders_name_seniorzyijuniorzy.indexOf("Brak zawodnika"));
+                SpinnerRiderNr2.setAdapter(areasAdapter);
+                SpinnerRiderNr2.setSelection(riders_name_seniorzyijuniorzy.indexOf("Brak zawodnika"));
+                SpinnerRiderNr3.setAdapter(areasAdapter);
+                SpinnerRiderNr3.setSelection(riders_name_seniorzyijuniorzy.indexOf("Brak zawodnika"));
+                SpinnerRiderNr4.setAdapter(areasAdapter);
+                SpinnerRiderNr4.setSelection(riders_name_seniorzyijuniorzy.indexOf("Brak zawodnika"));
+                SpinnerRiderNr5.setAdapter(areasAdapter);
+                SpinnerRiderNr5.setSelection(riders_name_seniorzyijuniorzy.indexOf("Brak zawodnika"));
 
-                ArrayAdapter<String> areasAdapter_jr = new ArrayAdapter<String>(RidersListActivity.this, android.R.layout.simple_spinner_item, riders_name_juniorzy);
+                ArrayAdapter<String> areasAdapter_jr = new ArrayAdapter<String>(RidersListActivity_GUESTS.this, android.R.layout.simple_spinner_item, riders_name_juniorzy);
                 areasAdapter_jr.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                SpinnerRiderNr14.setAdapter(areasAdapter_jr);
-                SpinnerRiderNr14.setSelection(riders_name_juniorzy.indexOf("Brak zawodnika"));
-                SpinnerRiderNr15.setAdapter(areasAdapter_jr);
-                SpinnerRiderNr15.setSelection(riders_name_juniorzy.indexOf("Brak zawodnika"));
+                SpinnerRiderNr6.setAdapter(areasAdapter_jr);
+                SpinnerRiderNr6.setSelection(riders_name_juniorzy.indexOf("Brak zawodnika"));
+                SpinnerRiderNr7.setAdapter(areasAdapter_jr);
+                SpinnerRiderNr7.setSelection(riders_name_juniorzy.indexOf("Brak zawodnika"));
 
 
-                SpinnerRiderNr9.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                SpinnerRiderNr1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
                     public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
                         String index = arg0.getSelectedItem().toString();
@@ -119,7 +119,7 @@ public class RidersListActivity extends AppCompatActivity {
                     public void onNothingSelected(AdapterView<?> arg0) {
                     }
                 });
-                SpinnerRiderNr10.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                SpinnerRiderNr2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
                     public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
                         String index = arg0.getSelectedItem().toString();
@@ -131,7 +131,7 @@ public class RidersListActivity extends AppCompatActivity {
                     public void onNothingSelected(AdapterView<?> arg0) {
                     }
                 });
-                SpinnerRiderNr11.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                SpinnerRiderNr3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
                     public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
                         String index = arg0.getSelectedItem().toString();
@@ -143,7 +143,7 @@ public class RidersListActivity extends AppCompatActivity {
                     public void onNothingSelected(AdapterView<?> arg0) {
                     }
                 });
-                SpinnerRiderNr12.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                SpinnerRiderNr4.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
                     public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
                         String index = arg0.getSelectedItem().toString();
@@ -155,7 +155,7 @@ public class RidersListActivity extends AppCompatActivity {
                     public void onNothingSelected(AdapterView<?> arg0) {
                     }
                 });
-                SpinnerRiderNr13.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                SpinnerRiderNr5.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
                     public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
                         String index = arg0.getSelectedItem().toString();
@@ -167,7 +167,7 @@ public class RidersListActivity extends AppCompatActivity {
                     public void onNothingSelected(AdapterView<?> arg0) {
                     }
                 });
-                SpinnerRiderNr14.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                SpinnerRiderNr6.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
                     public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
                         String index = arg0.getSelectedItem().toString();
@@ -179,7 +179,7 @@ public class RidersListActivity extends AppCompatActivity {
                     public void onNothingSelected(AdapterView<?> arg0) {
                     }
                 });
-                SpinnerRiderNr15.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                SpinnerRiderNr7.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
                     public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
                         String index = arg0.getSelectedItem().toString();
@@ -219,9 +219,9 @@ public class RidersListActivity extends AppCompatActivity {
 
 
             public void openRidersActivity(){
-                Intent intent = new Intent(RidersListActivity.this, RidersListActivity_GUESTS.class);
-                String host_tmp = StringHelper.GuestString;
-                intent.putExtra("GUEST_STRING", host_tmp);
+                Intent intent = new Intent(RidersListActivity_GUESTS.this, RidersListActivity_GUESTS.class);
+                String host_tmp = StringHelper.HostString;
+                intent.putExtra("HOST_STRING", host_tmp);
                 startActivity(intent);
             }
         });

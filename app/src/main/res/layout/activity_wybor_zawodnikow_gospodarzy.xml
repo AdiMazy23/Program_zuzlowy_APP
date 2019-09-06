@@ -8,64 +8,64 @@
     android:orientation="vertical">
 
     <Spinner
-        android:id="@+id/spinnerNr14"
+        android:id="@+id/spinnerNr7"
         android:layout_width="302dp"
         android:layout_height="18dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView7"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerNr13" />
+        app:layout_constraintTop_toBottomOf="@+id/spinnerNr6" />
 
     <Spinner
-        android:id="@+id/spinnerNr15"
+        android:id="@+id/spinnerNr6"
         android:layout_width="302dp"
         android:layout_height="18dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView8"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerNr14" />
+        app:layout_constraintStart_toEndOf="@+id/textView7"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerNr5" />
 
     <Spinner
-        android:id="@+id/spinnerNr13"
+        android:id="@+id/spinnerNr5"
         android:layout_width="302dp"
         android:layout_height="18dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView6"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerNr12" />
+        app:layout_constraintTop_toBottomOf="@+id/spinnerNr4" />
 
     <Spinner
-        android:id="@+id/spinnerNr12"
+        android:id="@+id/spinnerNr4"
         android:layout_width="302dp"
         android:layout_height="18dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView4"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerNr11" />
+        app:layout_constraintTop_toBottomOf="@+id/spinnerNr3" />
 
     <Spinner
-        android:id="@+id/spinnerNr10"
+        android:id="@+id/spinnerNr2"
         android:layout_width="302dp"
         android:layout_height="18dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerNr9" />
+        app:layout_constraintTop_toBottomOf="@+id/spinnerNr1" />
 
     <Spinner
-        android:id="@+id/spinnerNr11"
+        android:id="@+id/spinnerNr3"
         android:layout_width="302dp"
         android:layout_height="18dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView3"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerNr10" />
+        app:layout_constraintTop_toBottomOf="@+id/spinnerNr2" />
 
     <TextView
         android:id="@+id/textView6"
@@ -148,7 +148,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
-        android:id="@+id/spinnerNr9"
+        android:id="@+id/spinnerNr1"
         android:layout_width="302dp"
         android:layout_height="18dp"
         android:layout_marginStart="26dp"
@@ -164,6 +164,6 @@
         android:layout_marginStart="45dp"
         android:layout_marginBottom="14dp"
         android:text="Wybierz zawodników gospodarzy: "
-        app:layout_constraintBottom_toTopOf="@+id/spinnerNr9"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerNr1"
         app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
