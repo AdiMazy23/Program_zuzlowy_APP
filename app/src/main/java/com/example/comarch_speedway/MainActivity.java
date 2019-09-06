@@ -74,10 +74,7 @@ public class MainActivity extends AppCompatActivity {
         final Spinner hostSpinner = (Spinner) findViewById(R.id.gospodarz_spinner); //zapelnianie spinnerow w main widoku
         final Spinner guestSpinner = (Spinner) findViewById(R.id.gosc_spinner);
 
-        final String host_selected;
-        final String guest_selected;
 
-        //test
         myRef2.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -95,21 +92,31 @@ public class MainActivity extends AppCompatActivity {
 
 
                 Log.d("Sprawdzam, ", "Value is: " + map);
-                Log.d("Parents, ", "Values are: " + teams);
+                //Log.d("Parents, ", "Values are: " + teams);
 
                 ArrayAdapter<String> areasAdapter = new ArrayAdapter<String>(MainActivity.this, android.R.layout.simple_spinner_item, teams_name_seniorzy);
                 areasAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 hostSpinner.setAdapter(areasAdapter);
                 guestSpinner.setAdapter(areasAdapter);
+                guestSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
+                        String index = arg0.getSelectedItem().toString();
+                        StringHelper.GuestString = index;
+                        Log.d("SpinnerGuest ", "Wybrales sobie na spinnerze:  " + index);
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> arg0) {
+                    }
+                    });
 
                 hostSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
                     public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
                         String index = arg0.getSelectedItem().toString();
-
-                        //Toast.makeText(getBaseContext(), "You have selected item : " + presidents[index], Toast.LENGTH_SHORT).show();
-                        setStringIntent(index);
-                        Log.d("Spinner ", "Wybrales sobie na spinnerze:  " + index);
+                        StringHelper.HostString = index;
+                        Log.d("SpinnerHost ", "Wybrales sobie na spinnerze:  " + index);
                     }
 
                     @Override
@@ -121,7 +128,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onCancelled(DatabaseError error) {
                 // Failed to read value
-                Log.w("dupa nie udalo sie", "Failed to read value.", error.toException());
+                Log.w("nie udalo sie, ", "Failed to read value.", error.toException());
             }
         }        );
         myRef2.addValueEventListener(new ValueEventListener() {
@@ -136,12 +143,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         setButtonClickListener();
-    }
-
-    public void setStringIntent(String string){
-        final String host_team;
-
-        host_team = string;
     }
 
     public void myClickHandler (View view){
@@ -171,7 +172,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void openRidersActivity(){
         Intent intent = new Intent(MainActivity.this, RidersListActivity.class);
-        //intent.putExtra(host_team);
+        String host_tmp = StringHelper.HostString;
+        intent.putExtra("HOST_STRING", host_tmp);
         startActivity(intent);
     }
 
