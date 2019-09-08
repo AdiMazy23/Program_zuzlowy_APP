@@ -1,5 +1,10 @@
 package com.example.comarch_speedway;
 
+import android.app.AppComponentFactory;
+import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
+
 public class StringHelper {
         public static String HostString;
         public static String GuestString;
@@ -19,4 +24,5 @@ public class StringHelper {
         public static String Zawodnik13;
         public static String Zawodnik14;  //junior
         public static String Zawodnik15;  //junior
+
     }

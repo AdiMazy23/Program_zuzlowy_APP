@@ -7,7 +7,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -30,7 +32,7 @@ public class RidersListActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        String hostTeamName;
+        final String hostTeamName;
         if (savedInstanceState == null) {
             Bundle extras = getIntent().getExtras();
             //Log.d("Sprawdzam button,  ", extras);
@@ -47,6 +49,8 @@ public class RidersListActivity extends AppCompatActivity {
         //DatabaseReference myRefjuniorzy = database.getInstance().getReference().child("teams").child(hostTeamName);
         setContentView(R.layout.activity_wybor_zawodnikow_gospodarzy);
 
+        final TextView NazwaZespolu = (TextView) findViewById(R.id.textView9);
+        final ImageView teamlogo = (ImageView) findViewById(R.id.imageView);
         final List<String> riders_name_seniorzyijuniorzy = new ArrayList();
         final List<String> riders_name_juniorzy = new ArrayList();
 
@@ -67,6 +71,25 @@ public class RidersListActivity extends AppCompatActivity {
 
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
+
+                NazwaZespolu.setText(hostTeamName);
+                ///////////////////ustawienie logo druzyny//////////////////
+                if (hostTeamName.contains("Ostrów"))
+                    teamlogo.setImageResource(R.drawable.ostrow);
+                if (hostTeamName.contains("Rybnki"))
+                    teamlogo.setImageResource(R.drawable.rybnik);
+                if (hostTeamName.contains("Gniezno"))
+                    teamlogo.setImageResource(R.drawable.gniezno);
+                if (hostTeamName.contains("Gdańsk"))
+                    teamlogo.setImageResource(R.drawable.gdansk);
+                if (hostTeamName.contains("Łódź"))
+                    teamlogo.setImageResource(R.drawable.lodz);
+                if (hostTeamName.contains("Daugavpils"))
+                    teamlogo.setImageResource(R.drawable.daugavpils);
+                if (hostTeamName.contains("Tarnów"))
+                    teamlogo.setImageResource(R.drawable.tarnow);
+
+                //////////////////////////////////////////
 
                 Map<String, Object> map = (Map<String, Object>) dataSnapshot.getValue();
                 List<String> riders_name = new ArrayList(map.keySet());

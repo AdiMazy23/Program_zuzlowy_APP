@@ -11,6 +11,7 @@
         android:id="@+id/gospodarz_txt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="73dp"
         android:text="Wybierz gospodarza:"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,6 +21,7 @@
         android:id="@+id/gosc_txt"
         android:layout_width="170dp"
         android:layout_height="20dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="120dp"
         android:text="Wybierz gościa:"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,10 +49,10 @@
         android:id="@+id/main_button_next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="161dp"
-        android:layout_marginTop="40dp"
-        android:text="Next"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gosc_spinner" />
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="32dp"
+        android:text="Dalej >>"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

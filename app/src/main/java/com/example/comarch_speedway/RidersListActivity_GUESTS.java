@@ -7,7 +7,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -30,7 +32,7 @@ public class RidersListActivity_GUESTS extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        String guestTeamName;
+        final String guestTeamName;
         if (savedInstanceState == null) {
             Bundle extras = getIntent().getExtras();
             //Log.d("Sprawdzam button,  ", extras);
@@ -43,9 +45,13 @@ public class RidersListActivity_GUESTS extends AppCompatActivity {
         } else {
             guestTeamName = (String) savedInstanceState.getSerializable("NULL...");
         }
+
         DatabaseReference myRef2 = database.getInstance().getReference().child("teams").child(guestTeamName);
         //DatabaseReference myRefjuniorzy = database.getInstance().getReference().child("teams").child(hostTeamName);
         setContentView(R.layout.activity_wybor_zawodnikow_gosci);
+
+        final TextView NazwaZespolu = (TextView) findViewById(R.id.textView9);
+        final ImageView teamlogo2 = (ImageView) findViewById(R.id.imageView2);
 
         final List<String> riders_name_seniorzyijuniorzy = new ArrayList();
         final List<String> riders_name_juniorzy = new ArrayList();
@@ -67,6 +73,25 @@ public class RidersListActivity_GUESTS extends AppCompatActivity {
 
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
+
+                NazwaZespolu.setText(guestTeamName);
+                ///////////////////ustawienie logo druzyny//////////////////
+                if (guestTeamName.contains("Ostrów"))
+                    teamlogo2.setImageResource(R.drawable.ostrow);
+                if (guestTeamName.contains("Rybnki"))
+                    teamlogo2.setImageResource(R.drawable.rybnik);
+                if (guestTeamName.contains("Gniezno"))
+                    teamlogo2.setImageResource(R.drawable.gniezno);
+                if (guestTeamName.contains("Gdańsk"))
+                    teamlogo2.setImageResource(R.drawable.gdansk);
+                if (guestTeamName.contains("Łódź"))
+                    teamlogo2.setImageResource(R.drawable.lodz);
+                if (guestTeamName.contains("Daugavpils"))
+                    teamlogo2.setImageResource(R.drawable.daugavpils);
+                if (guestTeamName.contains("Tarnów"))
+                    teamlogo2.setImageResource(R.drawable.tarnow);
+
+                //////////////////////////////////////////
 
                 Map<String, Object> map = (Map<String, Object>) dataSnapshot.getValue();
                 List<String> riders_name = new ArrayList(map.keySet());
@@ -111,7 +136,7 @@ public class RidersListActivity_GUESTS extends AppCompatActivity {
                     @Override
                     public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
                         String index = arg0.getSelectedItem().toString();
-                        StringHelper.Zawodnik9 = index;
+                        StringHelper.Zawodnik1 = index;
                         Log.d("SpinnerGuest ", "Wybrales sobie na spinnerze:  " + index);
                     }
 
@@ -123,7 +148,7 @@ public class RidersListActivity_GUESTS extends AppCompatActivity {
                     @Override
                     public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
                         String index = arg0.getSelectedItem().toString();
-                        StringHelper.Zawodnik10 = index;
+                        StringHelper.Zawodnik2 = index;
                         Log.d("SpinnerGuest ", "Wybrales sobie na spinnerze:  " + index);
                     }
 
@@ -135,7 +160,7 @@ public class RidersListActivity_GUESTS extends AppCompatActivity {
                     @Override
                     public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
                         String index = arg0.getSelectedItem().toString();
-                        StringHelper.Zawodnik11 = index;
+                        StringHelper.Zawodnik3 = index;
                         Log.d("SpinnerGuest ", "Wybrales sobie na spinnerze:  " + index);
                     }
 
@@ -147,7 +172,7 @@ public class RidersListActivity_GUESTS extends AppCompatActivity {
                     @Override
                     public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
                         String index = arg0.getSelectedItem().toString();
-                        StringHelper.Zawodnik12 = index;
+                        StringHelper.Zawodnik4 = index;
                         Log.d("SpinnerGuest ", "Wybrales sobie na spinnerze:  " + index);
                     }
 
@@ -159,7 +184,7 @@ public class RidersListActivity_GUESTS extends AppCompatActivity {
                     @Override
                     public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
                         String index = arg0.getSelectedItem().toString();
-                        StringHelper.Zawodnik13 = index;
+                        StringHelper.Zawodnik5 = index;
                         Log.d("SpinnerGuest ", "Wybrales sobie na spinnerze:  " + index);
                     }
 
@@ -171,7 +196,7 @@ public class RidersListActivity_GUESTS extends AppCompatActivity {
                     @Override
                     public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
                         String index = arg0.getSelectedItem().toString();
-                        StringHelper.Zawodnik14 = index;
+                        StringHelper.Zawodnik6 = index;
                         Log.d("SpinnerGuest ", "Wybrales sobie na spinnerze:  " + index);
                     }
 
@@ -183,7 +208,7 @@ public class RidersListActivity_GUESTS extends AppCompatActivity {
                     @Override
                     public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
                         String index = arg0.getSelectedItem().toString();
-                        StringHelper.Zawodnik15 = index;
+                        StringHelper.Zawodnik7 = index;
                         Log.d("SpinnerGuest ", "Wybrales sobie na spinnerze:  " + index);
                     }
 
@@ -219,7 +244,7 @@ public class RidersListActivity_GUESTS extends AppCompatActivity {
 
 
             public void openRidersActivity(){
-                Intent intent = new Intent(RidersListActivity_GUESTS.this, RidersListActivity_GUESTS.class);
+                Intent intent = new Intent(RidersListActivity_GUESTS.this, Choose_1or2.class);
                 String host_tmp = StringHelper.HostString;
                 intent.putExtra("HOST_STRING", host_tmp);
                 startActivity(intent);
