@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
                         String index = arg0.getSelectedItem().toString();
-                        StringHelper.GuestString = index;
+                        DataContainer.GuestString = index;
                         Log.d("SpinnerGuest ", "Wybrales sobie na spinnerze:  " + index);
                     }
 
@@ -114,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
                         String index = arg0.getSelectedItem().toString();
-                        StringHelper.HostString = index;
+                        DataContainer.HostString = index;
                         Log.d("SpinnerHost ", "Wybrales sobie na spinnerze:  " + index);
                     }
 
@@ -171,7 +171,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void openRidersActivity(){
         Intent intent = new Intent(MainActivity.this, RidersListActivity.class);
-        String host_tmp = StringHelper.HostString;
+        String host_tmp = DataContainer.HostString;
         intent.putExtra("HOST_STRING", host_tmp);
         startActivity(intent);
     }

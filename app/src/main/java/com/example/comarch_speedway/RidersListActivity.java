@@ -76,7 +76,7 @@ public class RidersListActivity extends AppCompatActivity {
                 ///////////////////ustawienie logo druzyny//////////////////
                 if (hostTeamName.contains("Ostrów"))
                     teamlogo.setImageResource(R.drawable.ostrow);
-                if (hostTeamName.contains("Rybnki"))
+                if (hostTeamName.contains("Rybnik"))
                     teamlogo.setImageResource(R.drawable.rybnik);
                 if (hostTeamName.contains("Gniezno"))
                     teamlogo.setImageResource(R.drawable.gniezno);
@@ -134,7 +134,7 @@ public class RidersListActivity extends AppCompatActivity {
                     @Override
                     public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
                         String index = arg0.getSelectedItem().toString();
-                        StringHelper.Zawodnik9 = index;
+                        DataContainer.Zawodnik9 = index;
                         Log.d("SpinnerGuest ", "Wybrales sobie na spinnerze:  " + index);
                     }
 
@@ -146,7 +146,7 @@ public class RidersListActivity extends AppCompatActivity {
                     @Override
                     public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
                         String index = arg0.getSelectedItem().toString();
-                        StringHelper.Zawodnik10 = index;
+                        DataContainer.Zawodnik10 = index;
                         Log.d("SpinnerGuest ", "Wybrales sobie na spinnerze:  " + index);
                     }
 
@@ -158,7 +158,7 @@ public class RidersListActivity extends AppCompatActivity {
                     @Override
                     public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
                         String index = arg0.getSelectedItem().toString();
-                        StringHelper.Zawodnik11 = index;
+                        DataContainer.Zawodnik11 = index;
                         Log.d("SpinnerGuest ", "Wybrales sobie na spinnerze:  " + index);
                     }
 
@@ -170,7 +170,7 @@ public class RidersListActivity extends AppCompatActivity {
                     @Override
                     public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
                         String index = arg0.getSelectedItem().toString();
-                        StringHelper.Zawodnik12 = index;
+                        DataContainer.Zawodnik12 = index;
                         Log.d("SpinnerGuest ", "Wybrales sobie na spinnerze:  " + index);
                     }
 
@@ -182,7 +182,7 @@ public class RidersListActivity extends AppCompatActivity {
                     @Override
                     public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
                         String index = arg0.getSelectedItem().toString();
-                        StringHelper.Zawodnik13 = index;
+                        DataContainer.Zawodnik13 = index;
                         Log.d("SpinnerGuest ", "Wybrales sobie na spinnerze:  " + index);
                     }
 
@@ -194,7 +194,7 @@ public class RidersListActivity extends AppCompatActivity {
                     @Override
                     public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
                         String index = arg0.getSelectedItem().toString();
-                        StringHelper.Zawodnik14 = index;
+                        DataContainer.Zawodnik14 = index;
                         Log.d("SpinnerGuest ", "Wybrales sobie na spinnerze:  " + index);
                     }
 
@@ -206,7 +206,7 @@ public class RidersListActivity extends AppCompatActivity {
                     @Override
                     public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
                         String index = arg0.getSelectedItem().toString();
-                        StringHelper.Zawodnik15 = index;
+                        DataContainer.Zawodnik15 = index;
                         Log.d("SpinnerGuest ", "Wybrales sobie na spinnerze:  " + index);
                     }
 
@@ -243,7 +243,7 @@ public class RidersListActivity extends AppCompatActivity {
 
             public void openRidersActivity(){
                 Intent intent = new Intent(RidersListActivity.this, RidersListActivity_GUESTS.class);
-                String host_tmp = StringHelper.GuestString;
+                String host_tmp = DataContainer.GuestString;
                 intent.putExtra("GUEST_STRING", host_tmp);
                 startActivity(intent);
             }

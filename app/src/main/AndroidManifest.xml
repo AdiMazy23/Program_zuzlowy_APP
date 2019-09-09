@@ -36,6 +36,12 @@
                 <intent-filter>
                     <action android:name="com.package.name.Choose_1or2"/>
                 </intent-filter>
+            </activity>
+
+        <activity android:name=".SimpleHeat">
+            <intent-filter>
+                <action android:name="com.package.name.SimpleHeat"/>
+            </intent-filter>
         </activity>
     </application>
 
