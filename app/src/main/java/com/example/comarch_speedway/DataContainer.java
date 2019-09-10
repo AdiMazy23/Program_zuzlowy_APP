@@ -11,6 +11,9 @@ public class DataContainer {
         public static String Zawodnik5;
         public static String Zawodnik6; //junior
         public static String Zawodnik7; //junior
+        public static String[] names_host = {DataContainer.Zawodnik1,DataContainer.Zawodnik2,DataContainer.Zawodnik3,
+                DataContainer.Zawodnik4,DataContainer.Zawodnik5,DataContainer.Zawodnik6,DataContainer.Zawodnik7};
+
 
         public static String Zawodnik9;
         public static String Zawodnik10;

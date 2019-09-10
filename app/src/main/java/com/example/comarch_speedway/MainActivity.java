@@ -51,11 +51,6 @@ import java.util.Map;
 
 
 public class MainActivity extends AppCompatActivity {
-    //private static final String TAG = MainActivity.class.getName();
-
-    TextView temporaryTxt;
-    ListView listViewTeams;
-    public String string_test;
 
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference myRef = database.getReference("dupahehe");
@@ -69,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         final Spinner hostSpinner = (Spinner) findViewById(R.id.gospodarz_spinner); //zapelnianie spinnerow w main widoku
         final Spinner guestSpinner = (Spinner) findViewById(R.id.gosc_spinner);
@@ -145,12 +141,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void myClickHandler (View view){
+        final TextView txt_error = (TextView) findViewById(R.id.textView_errorteams);
         switch (view.getId()){
             case R.id.main_button_next:
                 Log.d("Sprawdzam button,  ", "KLIKNIĘTO NEXT"); //w tym miejscu dopisać save i otworzyc nowy widok z wyborem zawodnikow
                 //startActivity(new Intent(MainActivity.this, RidersListActivity.class));
-                openRidersActivity();
+                if (DataContainer.HostString != DataContainer.GuestString)
+                    openRidersActivity();
+                else{
+                    txt_error.setText("Wybierz różne zespoły!");
+                }
                 break;
+
             default:
         }
     }

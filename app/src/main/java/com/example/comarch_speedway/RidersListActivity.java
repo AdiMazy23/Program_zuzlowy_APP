@@ -22,6 +22,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 public class RidersListActivity extends AppCompatActivity {
 
@@ -46,7 +47,6 @@ public class RidersListActivity extends AppCompatActivity {
             hostTeamName = (String) savedInstanceState.getSerializable("NULL...");
         }
         DatabaseReference myRef2 = database.getInstance().getReference().child("teams").child(hostTeamName);
-        //DatabaseReference myRefjuniorzy = database.getInstance().getReference().child("teams").child(hostTeamName);
         setContentView(R.layout.activity_wybor_zawodnikow_gospodarzy);
 
         final TextView NazwaZespolu = (TextView) findViewById(R.id.textView9);
@@ -221,6 +221,7 @@ public class RidersListActivity extends AppCompatActivity {
                     case R.id.button:
                         Log.d("Sprawdzam button,  ", "KLIKNIĘTO NEXT"); //w tym miejscu dopisać save i otworzyc nowy widok z wyborem zawodnikow
                         //startActivity(new Intent(MainActivity.this, RidersListActivity.class));
+                        //checkIfAllUnique();
                         openRidersActivity();
                         break;
                     default:
@@ -246,6 +247,21 @@ public class RidersListActivity extends AppCompatActivity {
                 String host_tmp = DataContainer.GuestString;
                 intent.putExtra("GUEST_STRING", host_tmp);
                 startActivity(intent);
+            }
+
+            public void checkIfAllUnique(){
+                int j = 0;
+                    for (int i = 0; i < 7; i++) {
+                        if (i!=j) {
+                            if (DataContainer.names_host[i].equals(DataContainer.names_host[j])) {
+                                Log.d("Sprawdzam button,  ", "NIE SĄ UNIKALNE");
+                                //return false;
+                                j=j+1;
+                            }
+                        }
+                    }
+                Log.d("Sprawdzam button,  ", "SĄ UNIKALNE");
+                //return true;
             }
         });
     }
