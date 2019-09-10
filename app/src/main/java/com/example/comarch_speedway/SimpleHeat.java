@@ -1,18 +1,18 @@
 package com.example.comarch_speedway;
 
 import android.os.Bundle;
-import android.os.PersistableBundle;
+import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class SimpleHeat extends AppCompatActivity {
 
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
-        super.onCreate(savedInstanceState, persistentState);
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_simple_heat_view);
 
         TextView Bieg = (TextView) findViewById(R.id.text_bieg);
@@ -27,14 +27,15 @@ public class SimpleHeat extends AppCompatActivity {
         Button poleC_button = (Button) findViewById(R.id.button7);
         Button poleD_button = (Button) findViewById(R.id.button8);
 
-        //if (DataContainer.zestaw1or2 == true){  //zestaw 1 bieg 1
+        DataContainer.nr_biegu = 1;
+
+        if (DataContainer.zestaw1or2 == true){  //zestaw 1 bieg 1
             poleA_button.setBackgroundResource(R.color.Yellow);
             poleB_button.setBackgroundResource(R.color.Red);
             poleC_button.setBackgroundResource(R.color.White);
             poleD_button.setBackgroundResource(R.color.Blue);
 
-
-        //}
+        }
         if (DataContainer.zestaw1or2 == false){ //zestaw 2 bieg 1
             poleA_button.setBackgroundResource(R.color.Red);
             poleB_button.setBackgroundResource(R.color.Yellow);
@@ -45,5 +46,47 @@ public class SimpleHeat extends AppCompatActivity {
 
 
 
+    }
+
+
+    public void myClickHandler (View view){
+        switch (view.getId()){
+            case R.id.button_previousheat:
+                Log.d("Sprawdzam button 2,  ", "KLIKNIĘTO NEXT"); //w tym miejscu dopisać save i otworzyc nowy widok z wyborem zawodnikow
+                //startActivity(new Intent(MainActivity.this, RidersListActivity.class));
+
+                //openNextActivity();
+                break;
+            case R.id.button_nextheat:
+                Log.d("Sprawdzam button 3,  ", "KLIKNIĘTO NEXT"); //w tym miejscu dopisać save i otworzyc nowy widok z wyborem zawodnikow
+                //startActivity(new Intent(MainActivity.this, RidersListActivity.class));
+
+                //openNextActivity();
+                break;
+            default:
+        }
+    }
+
+    public void setButtonClickListener_previous() {
+        Button mainNext = (Button) findViewById(R.id.button_previousheat);
+
+        View.OnClickListener myClickListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                myClickHandler(view);
+            }
+        };
+        mainNext.setOnClickListener(myClickListener);
+    }
+    public void setButtonClickListener_next() {
+        Button mainNext2 = (Button) findViewById(R.id.button_nextheat);
+
+        View.OnClickListener myClickListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                myClickHandler(view);
+            }
+        };
+        mainNext2.setOnClickListener(myClickListener);
     }
 }

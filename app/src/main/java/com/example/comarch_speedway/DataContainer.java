@@ -36,21 +36,23 @@ public class DataContainer {
         String[] wynik_zawodnik14 = new String[4];
         String[] wynik_zawodnik15 = new String[4];
 
-        int suma_pkt_zawodnik1 = 0;
-        int suma_pkt_zawodnik2 = 0;
-        int suma_pkt_zawodnik3 = 0;
-        int suma_pkt_zawodnik4 = 0;
-        int suma_pkt_zawodnik5 = 0;
-        int suma_pkt_zawodnik6 = 0;
-        int suma_pkt_zawodnik7 = 0;
+        public static int suma_pkt_zawodnik1 = 0;
+        public static int suma_pkt_zawodnik2 = 0;
+        public static int suma_pkt_zawodnik3 = 0;
+        public static int suma_pkt_zawodnik4 = 0;
+        public static int suma_pkt_zawodnik5 = 0;
+        public static int suma_pkt_zawodnik6 = 0;
+        public static int suma_pkt_zawodnik7 = 0;
 
-        int suma_pkt_zawodnik9 = 0;
-        int suma_pkt_zawodnik10 = 0;
-        int suma_pkt_zawodnik11 = 0;
-        int suma_pkt_zawodnik12 = 0;
-        int suma_pkt_zawodnik13 = 0;
-        int suma_pkt_zawodnik14 = 0;
-        int suma_pkt_zawodnik15 = 0;
+        public static int suma_pkt_zawodnik9 = 0;
+        public static int suma_pkt_zawodnik10 = 0;
+        public static int suma_pkt_zawodnik11 = 0;
+        public static int suma_pkt_zawodnik12 = 0;
+        public static int suma_pkt_zawodnik13 = 0;
+        public static int suma_pkt_zawodnik14 = 0;
+        public static int suma_pkt_zawodnik15 = 0;
+
+        public static int nr_biegu = 1;
 
         public static boolean zestaw1or2 = true; //1 - true, 2 - false
 
