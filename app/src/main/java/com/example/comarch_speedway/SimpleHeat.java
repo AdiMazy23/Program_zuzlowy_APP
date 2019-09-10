@@ -30,18 +30,190 @@ public class SimpleHeat extends AppCompatActivity {
         DataContainer.nr_biegu = 1;
 
         if (DataContainer.zestaw1or2 == true){  //zestaw 1 bieg 1
-            poleA_button.setBackgroundResource(R.color.Yellow);
-            poleB_button.setBackgroundResource(R.color.Red);
-            poleC_button.setBackgroundResource(R.color.White);
-            poleD_button.setBackgroundResource(R.color.Blue);
-
+            if (DataContainer.nr_biegu == 1) {
+                poleA_button.setBackgroundResource(R.color.Yellow);
+                poleB_button.setBackgroundResource(R.color.Red);
+                poleC_button.setBackgroundResource(R.color.White);
+                poleD_button.setBackgroundResource(R.color.Blue);
+            }
+            if (DataContainer.nr_biegu == 2) {
+                poleA_button.setBackgroundResource(R.color.Blue);
+                poleB_button.setBackgroundResource(R.color.Yellow);
+                poleC_button.setBackgroundResource(R.color.Red);
+                poleD_button.setBackgroundResource(R.color.White);
+            }
+            if (DataContainer.nr_biegu == 3) {
+                poleA_button.setBackgroundResource(R.color.Red);
+                poleB_button.setBackgroundResource(R.color.Yellow);
+                poleC_button.setBackgroundResource(R.color.Blue);
+                poleD_button.setBackgroundResource(R.color.White);
+            }
+            if (DataContainer.nr_biegu == 4) {
+                poleA_button.setBackgroundResource(R.color.Yellow);
+                poleB_button.setBackgroundResource(R.color.Blue);
+                poleC_button.setBackgroundResource(R.color.White);
+                poleD_button.setBackgroundResource(R.color.Red);
+            }
+            if (DataContainer.nr_biegu == 5) {
+                poleA_button.setBackgroundResource(R.color.Blue);
+                poleB_button.setBackgroundResource(R.color.Yellow);
+                poleC_button.setBackgroundResource(R.color.Red);
+                poleD_button.setBackgroundResource(R.color.White);
+            }
+            if (DataContainer.nr_biegu == 6) {
+                poleA_button.setBackgroundResource(R.color.Yellow);
+                poleB_button.setBackgroundResource(R.color.Blue);
+                poleC_button.setBackgroundResource(R.color.White);
+                poleD_button.setBackgroundResource(R.color.Red);
+            }
+            if (DataContainer.nr_biegu == 7) {
+                poleA_button.setBackgroundResource(R.color.Red);
+                poleB_button.setBackgroundResource(R.color.Yellow);
+                poleC_button.setBackgroundResource(R.color.Blue);
+                poleD_button.setBackgroundResource(R.color.White);
+            }
+            if (DataContainer.nr_biegu == 8) {
+                poleA_button.setBackgroundResource(R.color.Red);
+                poleB_button.setBackgroundResource(R.color.White);
+                poleC_button.setBackgroundResource(R.color.Blue);
+                poleD_button.setBackgroundResource(R.color.Yellow);
+            }
+            if (DataContainer.nr_biegu == 9) {
+                poleA_button.setBackgroundResource(R.color.White);
+                poleB_button.setBackgroundResource(R.color.Blue);
+                poleC_button.setBackgroundResource(R.color.Yellow);
+                poleD_button.setBackgroundResource(R.color.Red);
+            }
+            if (DataContainer.nr_biegu == 10) {
+                poleA_button.setBackgroundResource(R.color.White);
+                poleB_button.setBackgroundResource(R.color.Red);
+                poleC_button.setBackgroundResource(R.color.Yellow);
+                poleD_button.setBackgroundResource(R.color.Blue);
+            }
+            if (DataContainer.nr_biegu == 11) {
+                poleA_button.setBackgroundResource(R.color.Blue);
+                poleB_button.setBackgroundResource(R.color.White);
+                poleC_button.setBackgroundResource(R.color.Red);
+                poleD_button.setBackgroundResource(R.color.Yellow);
+            }
+            if (DataContainer.nr_biegu == 12) {
+                poleA_button.setBackgroundResource(R.color.White);
+                poleB_button.setBackgroundResource(R.color.Blue);
+                poleC_button.setBackgroundResource(R.color.Yellow);
+                poleD_button.setBackgroundResource(R.color.Red);
+            }
+            if (DataContainer.nr_biegu == 13) {
+                poleA_button.setBackgroundResource(R.color.Blue);
+                poleB_button.setBackgroundResource(R.color.Yellow);
+                poleC_button.setBackgroundResource(R.color.Red);
+                poleD_button.setBackgroundResource(R.color.White);
+            }
+            if (DataContainer.nr_biegu == 14) {
+                poleA_button.setBackgroundResource(R.color.Yellow);
+                poleB_button.setBackgroundResource(R.color.Red);
+                poleC_button.setBackgroundResource(R.color.White);
+                poleD_button.setBackgroundResource(R.color.Blue);
+            }
+            if (DataContainer.nr_biegu == 15) {
+                poleA_button.setBackgroundResource(R.color.Red);
+                poleB_button.setBackgroundResource(R.color.Yellow);
+                poleC_button.setBackgroundResource(R.color.Blue);
+                poleD_button.setBackgroundResource(R.color.White);
+            }
         }
         if (DataContainer.zestaw1or2 == false){ //zestaw 2 bieg 1
-            poleA_button.setBackgroundResource(R.color.Red);
-            poleB_button.setBackgroundResource(R.color.Yellow);
-            poleC_button.setBackgroundResource(R.color.Blue);
-            poleD_button.setBackgroundResource(R.color.White);
 
+            if (DataContainer.nr_biegu == 1) {
+                poleA_button.setBackgroundResource(R.color.Red);
+                poleB_button.setBackgroundResource(R.color.Yellow);
+                poleC_button.setBackgroundResource(R.color.Blue);
+                poleD_button.setBackgroundResource(R.color.White);
+            }
+
+            if (DataContainer.nr_biegu == 2) {
+                poleA_button.setBackgroundResource(R.color.Yellow);
+                poleB_button.setBackgroundResource(R.color.Blue);
+                poleC_button.setBackgroundResource(R.color.White);
+                poleD_button.setBackgroundResource(R.color.Red);
+            }
+            if (DataContainer.nr_biegu == 3) {
+                poleA_button.setBackgroundResource(R.color.Yellow);
+                poleB_button.setBackgroundResource(R.color.Red);
+                poleC_button.setBackgroundResource(R.color.White);
+                poleD_button.setBackgroundResource(R.color.Blue);
+            }
+            if (DataContainer.nr_biegu == 4) {
+                poleA_button.setBackgroundResource(R.color.Blue);
+                poleB_button.setBackgroundResource(R.color.Yellow);
+                poleC_button.setBackgroundResource(R.color.Red);
+                poleD_button.setBackgroundResource(R.color.White);
+            }
+            if (DataContainer.nr_biegu == 5) {
+                poleA_button.setBackgroundResource(R.color.Yellow);
+                poleB_button.setBackgroundResource(R.color.Blue);
+                poleC_button.setBackgroundResource(R.color.White);
+                poleD_button.setBackgroundResource(R.color.Red);
+            }
+            if (DataContainer.nr_biegu == 6) {
+                poleA_button.setBackgroundResource(R.color.Blue);
+                poleB_button.setBackgroundResource(R.color.Yellow);
+                poleC_button.setBackgroundResource(R.color.Red);
+                poleD_button.setBackgroundResource(R.color.White);
+            }
+            if (DataContainer.nr_biegu == 7) {
+                poleA_button.setBackgroundResource(R.color.Yellow);
+                poleB_button.setBackgroundResource(R.color.Red);
+                poleC_button.setBackgroundResource(R.color.White);
+                poleD_button.setBackgroundResource(R.color.Blue);
+            }
+            if (DataContainer.nr_biegu == 8) {
+                poleA_button.setBackgroundResource(R.color.White);
+                poleB_button.setBackgroundResource(R.color.Red);
+                poleC_button.setBackgroundResource(R.color.Yellow);
+                poleD_button.setBackgroundResource(R.color.Blue);
+            }
+            if (DataContainer.nr_biegu == 9) {
+                poleA_button.setBackgroundResource(R.color.Blue);
+                poleB_button.setBackgroundResource(R.color.White);
+                poleC_button.setBackgroundResource(R.color.Red);
+                poleD_button.setBackgroundResource(R.color.Yellow);
+            }
+            if (DataContainer.nr_biegu == 10) {
+                poleA_button.setBackgroundResource(R.color.Red);
+                poleB_button.setBackgroundResource(R.color.White);
+                poleC_button.setBackgroundResource(R.color.Blue);
+                poleD_button.setBackgroundResource(R.color.Yellow);
+            }
+            if (DataContainer.nr_biegu == 11) {
+                poleA_button.setBackgroundResource(R.color.White);
+                poleB_button.setBackgroundResource(R.color.Blue);
+                poleC_button.setBackgroundResource(R.color.Yellow);
+                poleD_button.setBackgroundResource(R.color.Red);
+            }
+            if (DataContainer.nr_biegu == 12) {
+                poleA_button.setBackgroundResource(R.color.Blue);
+                poleB_button.setBackgroundResource(R.color.White);
+                poleC_button.setBackgroundResource(R.color.Red);
+                poleD_button.setBackgroundResource(R.color.Yellow);
+            }
+            if (DataContainer.nr_biegu == 13) {
+                poleA_button.setBackgroundResource(R.color.Yellow);
+                poleB_button.setBackgroundResource(R.color.Blue);
+                poleC_button.setBackgroundResource(R.color.White);
+                poleD_button.setBackgroundResource(R.color.Red);
+            }
+            if (DataContainer.nr_biegu == 14) {
+                poleA_button.setBackgroundResource(R.color.Red);
+                poleB_button.setBackgroundResource(R.color.Yellow);
+                poleC_button.setBackgroundResource(R.color.Blue);
+                poleD_button.setBackgroundResource(R.color.White);
+            }
+            if (DataContainer.nr_biegu == 15) {
+                poleA_button.setBackgroundResource(R.color.Yellow);
+                poleB_button.setBackgroundResource(R.color.Red);
+                poleC_button.setBackgroundResource(R.color.White);
+                poleD_button.setBackgroundResource(R.color.Blue);
+            }
         }
 
 
