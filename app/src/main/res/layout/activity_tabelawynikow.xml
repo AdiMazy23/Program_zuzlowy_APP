@@ -7,7 +7,530 @@
     android:layout_height="match_parent">
 
     <TextView
+        android:id="@+id/wynik5_5"
+        android:layout_width="15dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="208dp"
+        android:layout_marginEnd="32dp"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/wyniksuma5"
+        app:layout_constraintTop_toBottomOf="@+id/wynik12_5" />
+
+    <TextView
+        android:id="@+id/wynik4_5"
+        android:layout_width="15dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="184dp"
+        android:layout_marginEnd="32dp"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/wyniksuma4"
+        app:layout_constraintTop_toBottomOf="@+id/wynik12_5" />
+
+    <TextView
+        android:id="@+id/wynik3_5"
+        android:layout_width="15dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="160dp"
+        android:layout_marginEnd="32dp"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/wyniksuma3"
+        app:layout_constraintTop_toBottomOf="@+id/wynik12_5" />
+
+    <TextView
+        android:id="@+id/wynik2_5"
+        android:layout_width="15dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="136dp"
+        android:layout_marginEnd="32dp"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/wyniksuma2"
+        app:layout_constraintTop_toBottomOf="@+id/wynik12_5" />
+
+    <TextView
+        android:id="@+id/wynik13_10"
+        android:layout_width="15dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="32dp"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/wyniksuma5"
+        tools:layout_editor_absoluteY="24dp" />
+
+    <TextView
         android:id="@+id/wynik1_5"
+        android:layout_width="15dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="112dp"
+        android:layout_marginEnd="32dp"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/wyniksuma1"
+        app:layout_constraintTop_toBottomOf="@+id/wynik12_5" />
+
+    <TextView
+        android:id="@+id/wynik5_"
+        android:layout_width="15dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="280dp"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/wynik10_5"
+        app:layout_constraintTop_toBottomOf="@+id/wynik9_5" />
+
+    <TextView
+        android:id="@+id/wynik1_4"
+        android:layout_width="15dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="208dp"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/wynik9_5"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/wynik5_4"
+        android:layout_width="15dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="280dp"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/wynik5_5"
+        app:layout_constraintTop_toBottomOf="@+id/wynik9_5" />
+
+    <TextView
+        android:id="@+id/wynik7_1"
+        android:layout_width="15dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="280dp"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/wynik11_2"
+        app:layout_constraintTop_toBottomOf="@+id/wynik11_1" />
+
+    <TextView
+        android:id="@+id/wynik4_4"
+        android:layout_width="15dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="208dp"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/wynik11_5"
+        app:layout_constraintTop_toBottomOf="@+id/wynik11_4" />
+
+    <TextView
+        android:id="@+id/wynik4_2"
+        android:layout_width="15dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="208dp"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/wynik11_3"
+        app:layout_constraintTop_toBottomOf="@+id/wynik11_2" />
+
+    <TextView
+        android:id="@+id/wynik1_2"
+        android:layout_width="15dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="208dp"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/wynik9_3"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/wynik3_1"
+        android:layout_width="15dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="208dp"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/wynik11_2"
+        app:layout_constraintTop_toBottomOf="@+id/wynik10_1" />
+
+    <TextView
+        android:id="@+id/wynik7_2"
+        android:layout_width="15dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="280dp"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/wynik11_3"
+        app:layout_constraintTop_toBottomOf="@+id/wynik11_2" />
+
+    <TextView
+        android:id="@+id/wynik3_4"
+        android:layout_width="15dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="208dp"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/wynik11_5"
+        app:layout_constraintTop_toBottomOf="@+id/wynik10_5" />
+
+    <TextView
+        android:id="@+id/wynik6_2"
+        android:layout_width="15dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="280dp"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/wynik11_3"
+        app:layout_constraintTop_toBottomOf="@+id/wynik10_2" />
+
+    <TextView
+        android:id="@+id/wynik5_1"
+        android:layout_width="15dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="280dp"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/wynik10_2"
+        app:layout_constraintTop_toBottomOf="@+id/wynik9_5" />
+
+    <TextView
+        android:id="@+id/wynik4_3"
+        android:layout_width="15dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="208dp"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/wynik11_4"
+        app:layout_constraintTop_toBottomOf="@+id/wynik11_3" />
+
+    <TextView
+        android:id="@+id/wynik1_3"
+        android:layout_width="15dp"
+        android:layout_height="24dp"
+        android:text="-"
+        app:layout_constraintBottom_toTopOf="@+id/wynik2_3"
+        app:layout_constraintEnd_toStartOf="@+id/wynik9_4" />
+
+    <TextView
+        android:id="@+id/wynik2_1"
+        android:layout_width="15dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="208dp"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/wynik10_2"
+        app:layout_constraintTop_toBottomOf="@+id/wynik9_5" />
+
+    <TextView
+        android:id="@+id/wynik3_2"
+        android:layout_width="15dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="208dp"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/wynik11_3"
+        app:layout_constraintTop_toBottomOf="@+id/wynik10_2" />
+
+    <TextView
+        android:id="@+id/wynik4_1"
+        android:layout_width="15dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="208dp"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/wynik11_2"
+        app:layout_constraintTop_toBottomOf="@+id/wynik11_1" />
+
+    <TextView
+        android:id="@+id/wynik7_3"
+        android:layout_width="15dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="280dp"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/wynik11_4"
+        app:layout_constraintTop_toBottomOf="@+id/wynik11_3" />
+
+    <TextView
+        android:id="@+id/wynik5_3"
+        android:layout_width="15dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="280dp"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/wynik10_4"
+        app:layout_constraintTop_toBottomOf="@+id/wynik9_5" />
+
+    <TextView
+        android:id="@+id/wynik2_3"
+        android:layout_width="15dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="208dp"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/wynik10_4"
+        app:layout_constraintTop_toBottomOf="@+id/wynik9_5" />
+
+    <TextView
+        android:id="@+id/wynik2_2"
+        android:layout_width="15dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="208dp"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/wynik10_3"
+        app:layout_constraintTop_toBottomOf="@+id/wynik9_5" />
+
+    <TextView
+        android:id="@+id/wynik6_1"
+        android:layout_width="15dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="280dp"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/wynik11_2"
+        app:layout_constraintTop_toBottomOf="@+id/wynik10_1" />
+
+    <TextView
+        android:id="@+id/wynik3_3"
+        android:layout_width="15dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="208dp"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/wynik11_4"
+        app:layout_constraintTop_toBottomOf="@+id/wynik10_5" />
+
+    <TextView
+        android:id="@+id/wynik5_2"
+        android:layout_width="15dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="280dp"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/wynik10_3"
+        app:layout_constraintTop_toBottomOf="@+id/wynik9_5" />
+
+    <TextView
+        android:id="@+id/wynik2_4"
+        android:layout_width="15dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="208dp"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/wynik10_5"
+        app:layout_constraintTop_toBottomOf="@+id/wynik9_5" />
+
+    <TextView
+        android:id="@+id/wynik6_3"
+        android:layout_width="15dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="280dp"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/wynik11_4"
+        app:layout_constraintTop_toBottomOf="@+id/wynik10_5" />
+
+    <TextView
+        android:id="@+id/wynik1_1"
+        android:layout_width="15dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="208dp"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/wynik9_2"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/wynik13_5"
+        android:layout_width="15dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="32dp"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/wyniksuma13"
+        app:layout_constraintTop_toBottomOf="@+id/wynik12_5" />
+
+    <TextView
+        android:id="@+id/wynik13_4"
+        android:layout_width="15dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="72dp"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/wynik10_5"
+        app:layout_constraintTop_toBottomOf="@+id/wynik9_5" />
+
+    <TextView
+        android:id="@+id/wynik15_1"
+        android:layout_width="15dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="72dp"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/wynik11_2"
+        app:layout_constraintTop_toBottomOf="@+id/wynik11_1" />
+
+    <TextView
+        android:id="@+id/wynik15_2"
+        android:layout_width="15dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="72dp"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/wynik11_3"
+        app:layout_constraintTop_toBottomOf="@+id/wynik11_2" />
+
+    <TextView
+        android:id="@+id/wynik14_1"
+        android:layout_width="15dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="72dp"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/wynik11_2"
+        app:layout_constraintTop_toBottomOf="@+id/wynik10_1" />
+
+    <TextView
+        android:id="@+id/wynik10_50"
+        android:layout_width="15dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="72dp"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/wynik10_4"
+        app:layout_constraintTop_toBottomOf="@+id/wynik9_5" />
+
+    <TextView
+        android:id="@+id/wynik13_2"
+        android:layout_width="15dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="72dp"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/wynik10_3"
+        app:layout_constraintTop_toBottomOf="@+id/wynik9_5" />
+
+    <TextView
+        android:id="@+id/wynik14_3"
+        android:layout_width="15dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="72dp"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/wynik11_4"
+        app:layout_constraintTop_toBottomOf="@+id/wynik10_5" />
+
+    <TextView
+        android:id="@+id/wynik15_3"
+        android:layout_width="15dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="72dp"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/wynik11_4"
+        app:layout_constraintTop_toBottomOf="@+id/wynik11_3" />
+
+    <TextView
+        android:id="@+id/wynik13_1"
+        android:layout_width="15dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="72dp"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/wynik10_2"
+        app:layout_constraintTop_toBottomOf="@+id/wynik9_5" />
+
+    <TextView
+        android:id="@+id/wynik14_2"
+        android:layout_width="15dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="72dp"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/wynik11_3"
+        app:layout_constraintTop_toBottomOf="@+id/wynik10_2" />
+
+    <TextView
+        android:id="@+id/wynik12_1"
+        android:layout_width="15dp"
+        android:layout_height="24dp"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/wynik11_2"
+        app:layout_constraintTop_toBottomOf="@+id/wynik11_1" />
+
+    <TextView
+        android:id="@+id/wynik12_3"
+        android:layout_width="15dp"
+        android:layout_height="24dp"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/wynik11_4"
+        app:layout_constraintTop_toBottomOf="@+id/wynik11_3" />
+
+    <TextView
+        android:id="@+id/wynik12_4"
+        android:layout_width="15dp"
+        android:layout_height="24dp"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/wynik11_5"
+        app:layout_constraintTop_toBottomOf="@+id/wynik11_4" />
+
+    <TextView
+        android:id="@+id/wynik12_5"
+        android:layout_width="15dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="32dp"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/wyniksuma12"
+        app:layout_constraintTop_toBottomOf="@+id/wynik11_5" />
+
+    <TextView
+        android:id="@+id/wynik12_2"
+        android:layout_width="15dp"
+        android:layout_height="24dp"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/wynik11_3"
+        app:layout_constraintTop_toBottomOf="@+id/wynik11_2" />
+
+    <TextView
+        android:id="@+id/wynik11_1"
+        android:layout_width="15dp"
+        android:layout_height="24dp"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/wynik11_2"
+        app:layout_constraintTop_toBottomOf="@+id/wynik10_1" />
+
+    <TextView
+        android:id="@+id/wynik11_2"
+        android:layout_width="15dp"
+        android:layout_height="24dp"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/wynik11_3"
+        app:layout_constraintTop_toBottomOf="@+id/wynik10_2" />
+
+    <TextView
+        android:id="@+id/wynik11_3"
+        android:layout_width="15dp"
+        android:layout_height="24dp"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/wynik11_4"
+        app:layout_constraintTop_toBottomOf="@+id/wynik10_5" />
+
+    <TextView
+        android:id="@+id/wynik11_4"
+        android:layout_width="15dp"
+        android:layout_height="24dp"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/wynik11_5"
+        app:layout_constraintTop_toBottomOf="@+id/wynik10_5" />
+
+    <TextView
+        android:id="@+id/wynik11_5"
+        android:layout_width="15dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="32dp"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/wyniksuma11"
+        app:layout_constraintTop_toBottomOf="@+id/wynik10_5" />
+
+    <TextView
+        android:id="@+id/wynik10_1"
+        android:layout_width="15dp"
+        android:layout_height="24dp"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/wynik10_2"
+        app:layout_constraintTop_toBottomOf="@+id/wynik9_5" />
+
+    <TextView
+        android:id="@+id/wynik10_2"
+        android:layout_width="15dp"
+        android:layout_height="24dp"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/wynik10_3"
+        app:layout_constraintTop_toBottomOf="@+id/wynik9_5" />
+
+    <TextView
+        android:id="@+id/wynik10_3"
+        android:layout_width="15dp"
+        android:layout_height="24dp"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/wynik10_4"
+        app:layout_constraintTop_toBottomOf="@+id/wynik9_5" />
+
+    <TextView
+        android:id="@+id/wynik10_4"
+        android:layout_width="15dp"
+        android:layout_height="24dp"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/wynik10_5"
+        app:layout_constraintTop_toBottomOf="@+id/wynik9_5" />
+
+    <TextView
+        android:id="@+id/wynik10_5"
+        android:layout_width="15dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="32dp"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/wyniksuma10"
+        app:layout_constraintTop_toBottomOf="@+id/wynik9_5" />
+
+    <TextView
+        android:id="@+id/wynik9_5"
         android:layout_width="15dp"
         android:layout_height="24dp"
         android:layout_marginEnd="32dp"
@@ -16,35 +539,35 @@
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <TextView
-        android:id="@+id/wynik1_4"
+        android:id="@+id/wynik9_4"
         android:layout_width="15dp"
         android:layout_height="24dp"
         android:text="-"
-        app:layout_constraintEnd_toStartOf="@+id/wynik1_5"
+        app:layout_constraintEnd_toStartOf="@+id/wynik9_5"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <TextView
-        android:id="@+id/wynik1_3"
+        android:id="@+id/wynik9_3"
         android:layout_width="15dp"
         android:layout_height="24dp"
         android:text="-"
-        app:layout_constraintEnd_toStartOf="@+id/wynik1_4"
+        app:layout_constraintEnd_toStartOf="@+id/wynik9_4"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <TextView
-        android:id="@+id/wynik1_2"
+        android:id="@+id/wynik9_2"
         android:layout_width="15dp"
         android:layout_height="24dp"
         android:text="-"
-        app:layout_constraintEnd_toStartOf="@+id/wynik1_3"
+        app:layout_constraintEnd_toStartOf="@+id/wynik9_3"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <TextView
-        android:id="@+id/wynik1_1"
+        android:id="@+id/wynik9_1"
         android:layout_width="15dp"
         android:layout_height="24dp"
         android:text="-"
-        app:layout_constraintEnd_toStartOf="@+id/wynik1_2"
+        app:layout_constraintEnd_toStartOf="@+id/wynik9_2"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <TextView
@@ -459,4 +982,5 @@
         android:text="XX"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
