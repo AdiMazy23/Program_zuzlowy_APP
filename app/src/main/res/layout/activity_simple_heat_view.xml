@@ -6,6 +6,69 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <EditText
+        android:id="@+id/editText_D"
+        android:layout_width="20dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_C" />
+
+    <EditText
+        android:id="@+id/editText_C"
+        android:layout_width="20dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_B" />
+
+    <EditText
+        android:id="@+id/editText_B"
+        android:layout_width="20dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_A" />
+
+    <Spinner
+        android:id="@+id/spinner_D"
+        android:layout_width="70dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="16dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_C" />
+
+    <Spinner
+        android:id="@+id/spinner_C"
+        android:layout_width="70dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="16dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_B" />
+
+    <Spinner
+        android:id="@+id/spinner_B"
+        android:layout_width="70dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="16dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_A" />
+
     <TextView
         android:id="@+id/nrD_txt"
         android:layout_width="26dp"
@@ -180,5 +243,27 @@
         app:layout_constraintEnd_toStartOf="@+id/button_nextheat"
         app:layout_constraintStart_toEndOf="@+id/button_previousheat"
         app:srcCompat="@android:drawable/ic_menu_agenda" />
+
+    <Spinner
+        android:id="@+id/spinner_A"
+        android:layout_width="70dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="360dp"
+        android:layout_marginEnd="16dp"
+        android:scrollbarSize="2dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editText_A"
+        android:layout_width="20dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="108dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
