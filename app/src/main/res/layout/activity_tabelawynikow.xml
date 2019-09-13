@@ -11,9 +11,9 @@
         android:layout_width="15dp"
         android:layout_height="24dp"
         android:layout_marginTop="208dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginEnd="60dp"
         android:text="-"
-        app:layout_constraintEnd_toStartOf="@+id/wyniksuma5"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/wynik12_5" />
 
     <TextView
@@ -21,9 +21,8 @@
         android:layout_width="15dp"
         android:layout_height="24dp"
         android:layout_marginTop="184dp"
-        android:layout_marginEnd="32dp"
         android:text="-"
-        app:layout_constraintEnd_toStartOf="@+id/wyniksuma4"
+        app:layout_constraintStart_toEndOf="@+id/wynik4_4"
         app:layout_constraintTop_toBottomOf="@+id/wynik12_5" />
 
     <TextView
@@ -31,9 +30,8 @@
         android:layout_width="15dp"
         android:layout_height="24dp"
         android:layout_marginTop="160dp"
-        android:layout_marginEnd="32dp"
         android:text="-"
-        app:layout_constraintEnd_toStartOf="@+id/wyniksuma3"
+        app:layout_constraintStart_toEndOf="@+id/wynik3_4"
         app:layout_constraintTop_toBottomOf="@+id/wynik12_5" />
 
     <TextView
@@ -41,9 +39,8 @@
         android:layout_width="15dp"
         android:layout_height="24dp"
         android:layout_marginTop="136dp"
-        android:layout_marginEnd="32dp"
         android:text="-"
-        app:layout_constraintEnd_toStartOf="@+id/wyniksuma2"
+        app:layout_constraintStart_toEndOf="@+id/wynik2_4"
         app:layout_constraintTop_toBottomOf="@+id/wynik12_5" />
 
     <TextView
@@ -51,19 +48,9 @@
         android:layout_width="15dp"
         android:layout_height="24dp"
         android:layout_marginTop="112dp"
-        android:layout_marginEnd="32dp"
         android:text="-"
-        app:layout_constraintEnd_toStartOf="@+id/wyniksuma1"
+        app:layout_constraintStart_toEndOf="@+id/wynik1_4"
         app:layout_constraintTop_toBottomOf="@+id/wynik12_5" />
-
-    <TextView
-        android:id="@+id/wynik5_"
-        android:layout_width="15dp"
-        android:layout_height="24dp"
-        android:layout_marginTop="280dp"
-        android:text="-"
-        app:layout_constraintEnd_toStartOf="@+id/wynik10_5"
-        app:layout_constraintTop_toBottomOf="@+id/wynik9_5" />
 
     <TextView
         android:id="@+id/wynik1_4"
@@ -302,9 +289,8 @@
         android:id="@+id/wynik13_5"
         android:layout_width="15dp"
         android:layout_height="24dp"
-        android:layout_marginEnd="32dp"
         android:text="-"
-        app:layout_constraintEnd_toStartOf="@+id/wyniksuma13"
+        app:layout_constraintStart_toEndOf="@+id/wynik13_4"
         app:layout_constraintTop_toBottomOf="@+id/wynik12_5" />
 
     <TextView
@@ -425,9 +411,8 @@
         android:id="@+id/wynik12_5"
         android:layout_width="15dp"
         android:layout_height="24dp"
-        android:layout_marginEnd="32dp"
         android:text="-"
-        app:layout_constraintEnd_toStartOf="@+id/wyniksuma12"
+        app:layout_constraintStart_toEndOf="@+id/wynik12_4"
         app:layout_constraintTop_toBottomOf="@+id/wynik11_5" />
 
     <TextView
@@ -474,9 +459,9 @@
         android:id="@+id/wynik11_5"
         android:layout_width="15dp"
         android:layout_height="24dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginEnd="60dp"
         android:text="-"
-        app:layout_constraintEnd_toStartOf="@+id/wyniksuma11"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/wynik10_5" />
 
     <TextView
@@ -515,18 +500,18 @@
         android:id="@+id/wynik10_5"
         android:layout_width="15dp"
         android:layout_height="24dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginEnd="60dp"
         android:text="-"
-        app:layout_constraintEnd_toStartOf="@+id/wyniksuma10"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/wynik9_5" />
 
     <TextView
         android:id="@+id/wynik9_5"
         android:layout_width="15dp"
         android:layout_height="24dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginEnd="60dp"
         android:text="-"
-        app:layout_constraintEnd_toStartOf="@+id/wyniksuma9"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <TextView
@@ -560,123 +545,6 @@
         android:text="-"
         app:layout_constraintEnd_toStartOf="@+id/wynik9_2"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
-
-    <TextView
-        android:id="@+id/wyniksuma7"
-        android:layout_width="20dp"
-        android:layout_height="24dp"
-        android:layout_marginEnd="8dp"
-        android:text="XX"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/wyniksuma6" />
-
-    <TextView
-        android:id="@+id/wyniksuma6"
-        android:layout_width="20dp"
-        android:layout_height="24dp"
-        android:layout_marginEnd="8dp"
-        android:text="XX"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/wyniksuma5" />
-
-    <TextView
-        android:id="@+id/wyniksuma5"
-        android:layout_width="20dp"
-        android:layout_height="24dp"
-        android:layout_marginEnd="8dp"
-        android:text="XX"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/wyniksuma4" />
-
-    <TextView
-        android:id="@+id/wyniksuma4"
-        android:layout_width="20dp"
-        android:layout_height="24dp"
-        android:layout_marginEnd="8dp"
-        android:text="XX"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/wyniksuma3" />
-
-    <TextView
-        android:id="@+id/wyniksuma3"
-        android:layout_width="20dp"
-        android:layout_height="24dp"
-        android:layout_marginEnd="8dp"
-        android:text="XX"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/wyniksuma2" />
-
-    <TextView
-        android:id="@+id/wyniksuma2"
-        android:layout_width="20dp"
-        android:layout_height="24dp"
-        android:layout_marginEnd="8dp"
-        android:text="XX"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/wyniksuma1" />
-
-    <TextView
-        android:id="@+id/wyniksuma15"
-        android:layout_width="20dp"
-        android:layout_height="24dp"
-        android:layout_marginEnd="8dp"
-        android:text="XX"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/wyniksuma14" />
-
-    <TextView
-        android:id="@+id/wyniksuma1"
-        android:layout_width="20dp"
-        android:layout_height="24dp"
-        android:layout_marginEnd="8dp"
-        android:text="XX"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView19" />
-
-    <TextView
-        android:id="@+id/wyniksuma14"
-        android:layout_width="20dp"
-        android:layout_height="24dp"
-        android:layout_marginEnd="8dp"
-        android:text="XX"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/wyniksuma13" />
-
-    <TextView
-        android:id="@+id/wyniksuma13"
-        android:layout_width="20dp"
-        android:layout_height="24dp"
-        android:layout_marginEnd="8dp"
-        android:text="XX"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/wyniksuma12" />
-
-    <TextView
-        android:id="@+id/wyniksuma12"
-        android:layout_width="20dp"
-        android:layout_height="24dp"
-        android:layout_marginEnd="8dp"
-        android:text="XX"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/wyniksuma11" />
-
-    <TextView
-        android:id="@+id/wyniksuma11"
-        android:layout_width="20dp"
-        android:layout_height="24dp"
-        android:layout_marginEnd="8dp"
-        android:text="XX"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/wyniksuma10" />
-
-    <TextView
-        android:id="@+id/wyniksuma10"
-        android:layout_width="20dp"
-        android:layout_height="24dp"
-        android:layout_marginEnd="8dp"
-        android:text="XX"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/wyniksuma9" />
 
     <TextView
         android:id="@+id/nazwisko7_t"
@@ -784,18 +652,6 @@
         app:layout_constraintTop_toBottomOf="@+id/nazwisko9_t" />
 
     <TextView
-        android:id="@+id/textView19"
-        android:layout_width="43dp"
-        android:layout_height="25dp"
-        android:layout_marginTop="184dp"
-        android:layout_marginEnd="8dp"
-        android:fontFamily="monospace"
-        android:text="SUMA"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView18" />
-
-    <TextView
         android:id="@+id/nr7"
         android:layout_width="18dp"
         android:layout_height="24dp"
@@ -839,17 +695,6 @@
         android:text="3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nr2" />
-
-    <TextView
-        android:id="@+id/textView18"
-        android:layout_width="43dp"
-        android:layout_height="25dp"
-        android:layout_marginEnd="8dp"
-        android:fontFamily="monospace"
-        android:text="SUMA"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView17"
@@ -964,14 +809,5 @@
         android:text="TextView"
         app:layout_constraintStart_toEndOf="@+id/nr10"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
-
-    <TextView
-        android:id="@+id/wyniksuma9"
-        android:layout_width="20dp"
-        android:layout_height="24dp"
-        android:layout_marginEnd="8dp"
-        android:text="XX"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView18" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
