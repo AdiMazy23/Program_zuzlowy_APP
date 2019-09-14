@@ -41,7 +41,7 @@ public class RidersListActivity extends AppCompatActivity {
                 hostTeamName = null;
             } else {
                 hostTeamName = extras.getString("HOST_STRING");
-                Log.d("Przeslany string:  ", hostTeamName);
+                //Log.d("Przeslany string:  ", hostTeamName);
             }
         } else {
             hostTeamName = (String) savedInstanceState.getSerializable("NULL...");
@@ -219,9 +219,6 @@ public class RidersListActivity extends AppCompatActivity {
             public void myClickHandler (View view){
                 switch (view.getId()){
                     case R.id.button:
-                        Log.d("Sprawdzam button,  ", "KLIKNIĘTO NEXT"); //w tym miejscu dopisać save i otworzyc nowy widok z wyborem zawodnikow
-                        //startActivity(new Intent(MainActivity.this, RidersListActivity.class));
-                        //checkIfAllUnique();
                         openRidersActivity();
                         break;
                     default:
@@ -241,7 +238,6 @@ public class RidersListActivity extends AppCompatActivity {
             }
 
 
-
             public void openRidersActivity(){
                 Intent intent = new Intent(RidersListActivity.this, RidersListActivity_GUESTS.class);
                 String host_tmp = DataContainer.GuestString;
@@ -249,20 +245,6 @@ public class RidersListActivity extends AppCompatActivity {
                 startActivity(intent);
             }
 
-            public void checkIfAllUnique(){
-                int j = 0;
-                    for (int i = 0; i < 7; i++) {
-                        if (i!=j) {
-                            if (DataContainer.names_host[i].equals(DataContainer.names_host[j])) {
-                                Log.d("Sprawdzam button,  ", "NIE SĄ UNIKALNE");
-                                //return false;
-                                j=j+1;
-                            }
-                        }
-                    }
-                Log.d("Sprawdzam button,  ", "SĄ UNIKALNE");
-                //return true;
-            }
         });
     }
 }

@@ -221,8 +221,6 @@ public class RidersListActivity_GUESTS extends AppCompatActivity {
             public void myClickHandler (View view){
                 switch (view.getId()){
                     case R.id.button:
-                        Log.d("Sprawdzam button,  ", "KLIKNIĘTO NEXT"); //w tym miejscu dopisać save i otworzyc nowy widok z wyborem zawodnikow
-                        //startActivity(new Intent(MainActivity.this, RidersListActivity.class));
                         openRidersActivity();
                         break;
                     default:

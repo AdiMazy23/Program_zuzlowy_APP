@@ -44,14 +44,10 @@ public class Choose_1or2 extends AppCompatActivity {
         public void myClickHandler (View view){
             switch (view.getId()){
                 case R.id.button_zestaw1:
-                    Log.d("Sprawdzam button 2,  ", "KLIKNIĘTO NEXT"); //w tym miejscu dopisać save i otworzyc nowy widok z wyborem zawodnikow
-                    //startActivity(new Intent(MainActivity.this, RidersListActivity.class));
                     DataContainer.zestaw1or2 = true;
                     openNextActivity();
                     break;
                 case R.id.button_zestaw2:
-                    Log.d("Sprawdzam button 3,  ", "KLIKNIĘTO NEXT"); //w tym miejscu dopisać save i otworzyc nowy widok z wyborem zawodnikow
-                    //startActivity(new Intent(MainActivity.this, RidersListActivity.class));
                     DataContainer.zestaw1or2 = false;
                     openNextActivity();
                     break;
